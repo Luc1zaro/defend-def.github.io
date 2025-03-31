@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Тех Поддержка</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="C:/Users/IT-Kvant/Desktop/cmd.exe/heartsmall.png">
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff6f61, #ff3366);
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      height: 10%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-top: 50px;
+    }
+
+    footer p {
+      font-size: 1.1em;
+    }
+
+    footer a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .obratnuj-zvonok {
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .form-zvonok {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .form-zvonok div {
+      padding: 15px 0;
+    }
+
+    .bot-send-mail {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .form-zvonok label,
+    .form-zvonok input {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .form-zvonok label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-zvonok input {
+      padding: 10px 15px;
+      margin-top: 10px;
+    }
+
+    .form-zvonok label span {
+      color: red;
+    }
+
+    .form-zvonok .bot-send-mail {
+      padding: 15px;
+      margin-top: 10px;
+      background: none;
+      border: none;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: bold;
+      background-color: #009b97;
+      cursor: pointer;
+      border: 3px #009b97 solid;
+      border-radius: 5px;
+    }
+
+    .form-zvonok .bot-send-mail:hover {
+      color: #009b97;
+      background-color: #fff;
+    }
+
+    body {
+      background-image: url("https://images.pexels.com/photos/891252/pexels-photo-891252.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-position: center;
+      background-origin: content-box;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100vh;
+      font-family: 'Noto Sans', sans-serif;
+    }
+
+    .text-center {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 23px;
+      margin: -50px 0 80px 0;
+      display: block;
+      text-align: center;
+    }
+
+    .box {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.89);
+      border-radius: 3px;
+      padding: 70px 100px;
+    }
+
+    .input-container {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .input-container label {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-size: 16px;
+      color: #fff;
+      pointer-event: none;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .input-container input {
+      border: 0;
+      border-bottom: 1px solid #555;
+      background: transparent;
+      width: 100%;
+      padding: 8px 0 5px 0;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .input-container input:focus {
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #e74c3c;
+    }
+
+    .btn {
+      color: #fff;
+      background-color: #e74c3c;
+      outline: none;
+      border: 0;
+      color: #fff;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      margin-top: 50px;
+      border-radius: 2px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    /*.btn:after{
+  content:"";
+  position:absolute;
+  background:rgba(0,0,0,0.50);
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+}*/
+    .input-container input:focus~label,
+    .input-container input:valid~label {
+      top: -12px;
+      font-size: 12px;
+
+    }
+
+    .glow-on-hover {
+      width: 220px;
+      height: 50px;
+      border: none;
+      outline: none;
+      color: #fff;
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+    }
+
+    .glow-on-hover:before {
+      content: '';
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+      color: #000
+    }
+
+    .glow-on-hover:active:after {
+      background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+      opacity: 1;
+    }
+
+    .glow-on-hover:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+  </style>
+  <center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="main-content">
+      <form class="obratnuj-zvonok" autocomplete="off" action='file:///C:/Users/IT-Kvant/Desktop/cmd.exe/zagatovka.html'
+        method='post'>
+        <div class="form-zvonok">
+          <div>
+            <label>Тема Жалобы<span></span></label>
+            <input type='text' name='username' required placeholder=' Пример - Не могу зайти на сайт'>
+          </div>
+          <div>
+            <label>Опишите ситуацию(проблему)<span></span></label>
+            <input type='text' name='usernumber' required placeholder='Пример - выдает ошибку'>
+          </div>
+          <div>
+            <label>Как мы можем с вами связаться ?<span></span></label>
+            <input type='text' name='usernumber' required placeholder='Пример - @telegramm_user (Телеграмм) '>
+          </div>
+          <br>
+          <br>
+        </div>
+        <a href="file:///C:/Users/IT-Kvant/Desktop/cmd.exe/zagatovka.html"></a><input class="glow-on-hover"
+          type='submit' value='Послать заявку'>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <footer>
+          <p>&copy; 2024-2025 >.< - Все права защищены. Подписывайтесь на <a
+              href="https://www.youtube.com/channel/UCCN4cJ9lvSchIgD2l1zX5JQ">YouTube</a> или <a
+                href="https://vk.com/kvantoriumpyshma">VK</a></p>
+        </footer>
+    </div>
+  </center>

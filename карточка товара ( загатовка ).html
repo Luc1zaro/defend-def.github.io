@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка товара</title>
+    <link rel="stylesheet" href="card.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Добавлено для лучшего отображения на мобильных устройствах */
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    max-width: 800px; /* Уменьшено для лучшего отображения на мобильных устройствах */
+    width: 100%; /* Занимает всю доступную ширину */
+    border-color: #333;
+}
+
+.product-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover img {
+    transform: scale(1.1);
+}
+
+.product-info {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #e44d26; /* Красный цвет для цены */
+}
+
+.product-rating {
+    color: #f39c12; /* Желтый цвет для рейтинга */
+}
+
+.product-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.product-actions button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart {
+    background-color: #3498db; /* Синий цвет */
+    color: #fff;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+.view-details {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.view-details:hover {
+    background-color: #ddd;
+}
+
+/* Медиа запросы для адаптивности */
+@media (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+    }
+
+    .product-image {
+        height: 300px; /* Уменьшено для экранов поменьше */
+    }
+
+    .product-info {
+        padding: 20px;
+    }
+
+    .product-title {
+        font-size: 20px;
+    }
+
+    .product-description {
+        font-size: 14px;
+    }
+
+    .product-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .product-actions button {
+        width: 100%;
+    }
+}
+</style>
+<body>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="" alt="Название товара">
+        </div>
+        <div class="product-info">
+            <h2 class="product-title">Исходный код сайта</h2>
+            <p class="product-description">Создание сайта с нуля: Исходный код под ключ.
+
+                Хотите новый сайт, но не знаете с чего начать? Мы разработаем для вас уникальный сайт с нуля, учитывая все ваши пожелания и требования. Вы получите полный доступ к исходному коду (HTML, CSS, JavaScript, PHP, и т.д.), удобную систему управления контентом и профессиональную поддержку. Откройте свой бизнес в интернете уже сейчас!</p>
+            <div class="product-details">
+                <span class="product-price">$2.000.000.001</span>
+                <div class="product-rating">
+                    ★★★★★ (4.6)
+                </div>
+            </div>
+            <div class="product-actions">
+                <button class="add-to-cart">Добавить в корзину</button>
+                <button class="view-details">Подробнее</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

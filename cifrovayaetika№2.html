@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Цифровая этика</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="C:/Users/IT-Kvant/Desktop/cmd.exe/heartsmall.png">
+    <style>
+        /* Основные стили страницы */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff6f61, #ff3366);
+            color: #fff;
+            line-height: 1.6;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.3em;
+            padding: 8px 15px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border-radius: 25px;
+        }
+
+        nav a:hover {
+            background-color: #3498db;
+            transform: scale(1.1);
+        }
+
+        .main-content {
+            padding: 100px 20px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Раздел Биография */
+        .bio {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-bottom: 30px;
+            transition: background 0.3s ease;
+        }
+
+        .bio:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .bio h2 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .bio p {
+            font-size: 1.2em;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .bio img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Раздел Новости */
+        .news {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .news h3 {
+            font-size: 2.2em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .news ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .news ul li {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            transition: background 0.3s ease;
+        }
+
+        .news ul li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Раздел Статистика */
+        .stats {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .stats h3 {
+            font-size: 2.2em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .stats table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .stats th,
+        .stats td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #fff;
+        }
+
+        .stats th {
+            background-color: #3498db;
+            color: #fff;
+            font-size: 1.1em;
+        }
+
+        .stats td {
+            background-color: rgba(0, 0, 0, 0.3);
+            font-size: 1.2em;
+        }
+
+        /* Кнопка для улучшенной навигации */
+        .cta-btn {
+            background-color: #3498db;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <header>
+        <h1>Цифровая этика ›2/4‹</h1>
+        <nav>
+            <a href="file:///C:/Users/IT-Kvant/Desktop/cmd.exe/cifrovayaetika.html">Цифровая Этика</a>
+            <a href="file:///C:/Users/IT-Kvant/Desktop/cmd.exe/zagatovka.html">Главная</a>
+            <a href="file:///C:/Users/IT-Kvant/Desktop/cmd.exe/zachitacifrovihdannih.html">Защита перс. данных</a>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="bio">
+        <h2>Основы Цифровой Этики ›2/4‹</h2>
+        <p></p>
+        <p></p>
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDw8PDQ8PDw0ODQ4PDw8PEA8QDw4NFhEWFxURFhUYHSghGBolGxUVITEhJSkrLi4vFx8zODMtNygtLisBCgoKDg0OGxAQGjAdICYrLSsrKystLS0rKy0tKystLSsuLS0tKy0tLS0tLSsrLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKYBMAMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABAUCAwYBB//EAE0QAAEDAgICDAcLCwQDAAAAAAEAAgMEERIhBTEGExRBUVJTYXGR0dIHFyIjVJShFiQyM0JzgZKisrMVNGJydJOjscHh8CVDRIJjZOL/xAAaAQEAAgMBAAAAAAAAAAAAAAAAAQIDBAUG/8QANREBAAIBAwMCAgcIAwEBAAAAAAECAwQREhMhMQVRMnEUM0FhgZGxFSI0QlKh0eFDwfAkI//aAAwDAQACEQMRAD8AmI4ggICAgICAgICAgICAgICAgIPbHgKpOWkdpmPzZIw5JjeKz+TxWraLeJ3VtS1e1o2FKogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgsdDaPbOXh8rYg0NsXNLrkm1rXWpqK5LTEUvxdP0+uKYtOSnPwshsbp7gmqjO/ba3i+s7zuZaMaD97eckT/wC+bt/TY48YpMf++SUNC05y26DgF2Tc36fOFsV00U+GYj5b/wCWC+WMnx1mfnET/wBKarMDoAY4sEzZbOcHOILMxax57KuDU4rZK0rM7/b528fe1ddp5rhtbaNu32Rv5Va6bhCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDZTwPkcGRtc951NaLlExWZ7Q2spR5BkljY1xcDmXvZa+bmtzGYRPH3lJomsAdhcXHEbktwi3ySM98dS4HrXxU+UvQ+iRHG+3vCSuI7YmwiANwSYyWjbH5taHG+Vha4310/Tv4mvyn9HN9T2+jW394/VpbSYi0Ryxuc5mIgu2vCcrsJfYE57x3l6d5bhv4lokic0NLmuaHi7S4EBw4Qd9FZiY8sEQICAgICAgICAgICAgICAgICAgICAgICAgIJWjtHS1D8ELcRAuScmtHCSi9MdrztC1qtiNVG0uG1yWFy2NzsX0AgXRmtpbxG/lSU8DpHBjBdxvrIaAALkknIAI14rMztDcwxR4CRtz7OxsddsbT8nymm7uHeCLfux97B80j2tYScDAQ1uQaL69WvpRE2mezEQ8J6kRslUrmsvffsuT6lpMueazSN9t3Y9L1eLBFovO2+zfuhvD7CuZ+y9T7f3h1f2ppv6v7Sbobw+wp+y9T7f3g/amm/q/tKK52Tm7znl1/pXW0vp0YrVyTPeI8OPq/UpzUtjiO2/loMPAetdNytmcM8kZBBuG3s1wD2WOsYXXGaJi01ZRiJ+Bp8y4B2KQlz2Od8m7QLt+i/QiY4z9zTLA9gaXtIbI3EwkZObwgorNZjyhVtfFDbbXhpcbNaAXOceZozKmI3TWk28MaPScMxLY3+W3NzHNcx4HDhcAUmJgtS1fKWoVEBAQEBAQEBAQEBAQEBAQEBAQEBB1WgNijZomzVD3tDxdjGWBw7ziSDr4EbeHTRaOVl06iFBSzbnccbjcPeGlzS6zQdVjbXZa2rzzgxTeI32dHSaavLhE+UDYxWP24sxzPjezMTSvlIlbcl7S7MYsrtHk5CwGa0tL6lbPlik1iG5n0cYqcondu2QbG3zZ072gGRz3ROAa3Gdb8TRcnpvrXWcfNp5t8Lk6vRz6d5ZM2zxnwgjhB3wjTtjmk7S1IgQAEHuA8BQ2MB4ENnhCAiBBg6MHmRGxFM6O4wte0tc3C8Ym5744DkDccCJiZhaeDHR8Es2kKp7Q+eOr3NHjsXRU7Y2lthvYi4nnsrT4h0dPEceyT4WdHwto2VbWtbV09TTiFzQA54fIGui5wWkm3MlfZfNWJr3c2quSICAgICAgICAgICAgICAgICAgICDt9jmyGMQsilIDo2huZAuBq160dLBmrNYiZ2laVOk6aRlpM43G2bmgEixyOLeyWPJirkrxvG8NmuXhPKJ2RqapoY3B8bQHAEA4wdevW5YsWjw4rcqV2le+qteNrWTPy5BxvtM7VssXOvu5TZPpJtRI3BbDG0i4zuSeHfRo6i8Wt2VLYydeSNfZsDAEW2ZICAiREMSwFDZrdGRqzRGzBFUDTGk46aMvkzJyYwfCe7gHapiN1q0m07NOjX1cZZWUzzRVckYbOywlhnaD5O2MOo257i9ljx1vW1uU8o37fc2r6ilYrFK7befvS69tTVmGevq21Bic4spo49qigeMhKW54yQcnE5ZhZd/Ziy5pvXsyZG5xs1rnHgaCT7FVrREz4TtIaJmhEZfG8B8TXE4TZrje7TwHVkjJfFau28K9GMQEBAQEBAQEBAQEBAQEBAQEBBtpoC8usPJY0vkNwLRi19e/mAOchE1ruznftjrNBbE0na2FxdtbCb2F9/fKJmd57eHoCD0C6DexlulF4hkgICAgICAgIMXsB6UJhS/kRpqnVMr3SEW2pjgMMXRw839TmopNttrMmS9doinb3WZUsDCOV0RJYbBzXMdqIcxwsWkHL/AhEzV7UswOxRGTanEmJ7hhcQNYuN8HI2QmNu8eG3SGkpZhGHvc4RxNZYuNiRfyjwnVnzItfJa23dCRjEBAQEBAQEBAQEBAQEBAQEBBHqK6GIgSyxxk6g97Wk/QVMRMpisz4hYzANYyMBhcbSGRrsWJr2tLWZZC2vfzPMoWtHGOP2vAA0Z6gLk/1REQ4mt2cvDztMcQjucJlxFzhw2BFuhZYx+7ZjBG3dpbs9qB8im6pO+p6cLdGvuy8YFTxKbqk76dODpV9z3f1PEpuqTvp04OlX3Pd/U8Sm6pO+nTg6Vfc939TxKbqk76dODpV9wbP6niUvVJ306cHSr7vX7PqgEjDSm2+BJY/bTpwdKvu8939TxKbqk76dODpV9z3f1PEpuqTvp04OlX3Pd/U8Sm6pO+nTg6Vfc939TxKbqk76dODpV92LtntQdbKbqk76dODo192yl2dSYhtscTmfK2vEHgcIuSD0JONWcEfZLt2ua9oc03a5oc08IIuCsLWmPsZ0oxgwkPc53xLWkWE5LRmCbZgW6kTXv8Au/l80UhFBAQEBAQEBAQEBAQEBAQEBAQbo42hj5JCRGxriSMzYC5Nt9c3V6y9MlcWKN7S6mh0NMlLZcs7VhF0HoiBrWzgR1LHN2+SSYAOnGvC6437gYQtjFrOV+leONo+z/CufTWpHVpPKn5fhKFoyIQ1csMYDYXwioEbcmRSF5a4NG8DrtzFbk943aUzyryla1nxUnzb/ulRCK+YeeBOhMlJVOAblVhpJ1/EsNtXOetXyeXTo+i/kl/BH/n0LGyH5JdwR/59CDcygIAG1wHnOK5Qe7iPI0/U5A3EeRp+pyAaIjMxU4A1nyrAIhhBA2RuKNlK9tyMTSXC/SEImJ7wz3EeRp+pyJNxHkafqcgxl0c5wsI4W5623ugiSaDkL43h4aGY7xtw4JbiwxXbfLWLEKd0bNMOx2Vu13ne/a3SucHbX50PvZr7M1Nvla2oXum5s4/wyUBj0fE5wZ+eRgEaxeOTm5lbH5Vv4QdDfmtN+zQfhtVbeXLt8UragpI37dLNI+OOmgdO50bcT/JI1DhUL4sXOfOyeNF0ss7Ym7sbLI10j2ObGTFEG/HyOLsmueC0Z3JxWFmuInZsTpazPlnWbEyHtbBKDijc+0uR8k6hhuFCl9JMfDLmUaYgICAgICAgICAgICAgICCypyHRhrwALWsdRHCvLayJx6qbY53nz/p6zRbZNJEZK7R4+f3qMaNqoLx0U0bqYOu2KaJ0m1Em+BrmuBLeY6luYs2HPbln/cvt5idt/wDbFnpkw144q86zPjbday0rGvMjWNbJI1oe4C2LDew9pWx6VmtelotO+09t2j6tjrS1OMbbx32aasXjk+bk+6V1ocqvlM8ArrUFYbE2rRkNZ8xGr5PLp4/D6Pul3JSdQ7VjZDdLuSk6h2oN7HXANiL7x1hBkgqdL7IIKa7XHHLybNY/WOpv8+ZGHJnrT5uH0vp6epuHuwRb0TMm/TxvpRz8ma1/KNRVs1M8mJzo3i2JpBAPM5p1orW1sc9uzs9D7LYpbMqLQyasX+049Pyfp60b2LVVt2t2dIDwaj/JG08cbAmxNhqGsoI+6XclJ1DtQN0u5KTqHag4Lw4OvouIkFt66LI6x5uVXx+VL+FFoce9qb9lg/Daq28uXf4pdHoGj3QysgDsBlopIw/DiwEkDFa4v0XHSkNjS+Z+S30PoZ8ExlMlM1jjO97KanfBts8uG73udUPuBY2AAtfKymZbsQt3nz0ef/Hl3+fp7VVM+HzAakcUQEBAQEBAQEBAQEBAQEGynZicBr3z9C1dbm6WGbR5behwdbPWs+PtbquX5I6T/n+by5/pem/5rfh/l1PWNX/wU/H/AKhKY8twsLS0iKNxuRmXAEEW3iCDwrB6npK456sT5nw2PS9VbJthmPhjy0zvuehdL07BXFhiY/m7uX6lntkzTWf5e0NM481Kf/E/7pXQho08t/gIP+n1tyQN2axrHmI8wr5PLpY/D6BtjOXm6j2LGyG2M5ebqPYgnwEFosS4W1u1npQVOy2ofHSPdG4sdiY3E02Ni6xzRg1FpjHMw+e0VM6aVkTSA6R4aC69rnfKObSvK0Qyn0zDT3FG3HINdXO0eTzxRnJvS65WzTB9tnf03p1ad7d5VMWyZ+Mx1zTUMxGznHDUxgm92vOsb+F1x0LNbT1tG9ezZzaLFmr27LOWNmGOSJ+OGZrnMLmljxZxaWuHCCDqyK0rVms7S87qdPOC/GXVbAah5dNGXOMbWNc1pNw0l2duBVZdHad5h2EvwTckCxzGsc4RvK/bGcvN1HsQNsZy83UexBxPhsIOiYbEuG7os3az5uVXx+VL+FPoke9KQ/8AqwfhtVbeXMv5dXsK+Nm+YP3gobGl+KXTYuf2/wD0jeYPPno8/wDjy7/P09qInw+YBHFEBAQEBAQEBAQEBAQEBBlHIWkEawsWbDXNSaW8MuDNbDeL08sXG9ydZ/mr1rFYiseGO1ptabT5lZPtt0rW7ZYYQBJ8MBthY3/zJcv1eszji3tP6u36ReIz2r7x+jS/WVu6Pvgp8mhrv4m/zY1HxMvzcn3StqGvVt8ArveFaQQLVus6h5iPNXyeXTp4fRdtdy8XUO1Y1zbXcvF1DtQSojdouQ421jUUFLs1/M3/ADkX3ka+q+rcZse/O6f55qNHB9ZCXsW0ZBDTt0nKyWodHKfNxhrhAwOwmUt1uLc3Zb1rC+a2slpm3COz0eW9rW6cdltXUE+lIp5i1sMDqeSOjjlYMct8xUSnWwb7WjVrPAqRMY5iPM/b/hii1cUxHmft/wAOOpD7yof1Kj8dyjUfWS5/q31zqvB/8bP80z7ywsGj+KXaP1HMDI5nUOdG+iba7l4uodqBtruXi6h2oOE8N7v9KhJcHe/ovKbqPm5VenlS/hU6Hzo6X9lpz/Daq28ubfzKwoK+WBxdC7C5zcJyDgRe+o9ChFL2pO8LWHZXNija/AGlzQ9+FuTSbF1rcGaNiNXPaJhqdsrlxlxYx5DXxtOIhtiddhrRE6ufGznAjTEBAQEBAQEBAQEBAQEBBlGwuNhxXO+hrST7AhEbsUEypfeeVwe595HkSOFnPGL4RGViq2rFo2tG8MvOa35Vnv7sSb5lKUilYrXtEF72vabW7zJVfESfNSfdKtCaeYZeAEH8n1tgCd26jqPvePWsmTy6dfD6RtT+Ri6x2LGsbU/kYusdiCVEDhFwGm2oaggpdmv5k/5yL7yNfVfVvn1HXbTLHK0Ytrka+3CAcx1I59J42iWVYaiicX0k0jaSdxfFJG4hjhxXDeeNRBzyW7Sa5I7+XqMV8eesT5VQ0zpOqe6njqKiQyFzSwPsMG/iO83hJyWXhjrG8wzTjxUjlMRCzqHMjbDTxuD2U8WAyDU+UuLnuH6OI2HQtDJblaZea1ubrZZtDp/B6byz25Jn3lQ0fxS7Z+o2AJscjqPMjfQ9qfyMXWOxA2p/IxdY7EHBeHIEaJhuA07viybqHm5VanlS/hV6F/MqX9kp/wAJqi3lzb+Zb1DG8jvtkViAdsZYu+CDiGZ5kI+KGuqPnJLkEmR9y34JOI5jmRFvMtSIEBAQEBAQEBAQEBAQEBBc7H6+CJ79tga68MoDsTr/AACS2xJGYBF+dGfDetZ7wqqiRriSyNsY3mtc91ua7iUYZmJ8RsgaU2U0ramYPlL3h1nuZE8AvsMQA5jcfQrRSZZ5xWtO6P7rKPjSfupOxTwlHRun0mloaqCcwOLtrjeHXa5pF2EjX0FRNZie6eM1mN1h4AhfR9dcFw3bqGs+948lbJ5dGvh9E2pnIS9Z7VjWNqZyEvWe1BOgADRYFotqOsIMamnZK0slY17Ha2uFwURMRMbS4zTWwki76I3GvaXnP/q46+g9aNPJpftq5mnq56Zz4y2wOUsEzMUb/wBZh/nrSJ28MFMl8Vu3ZjLXnC5kMcdPE83eyEEGQ/pOJLndF7K1r2t5lkzarJl+KVvoTYjPPZ814ITn5Q844czd7pPUVVGPT2t3ntDvNF6JgpW4YGBt7YnHN7+k/wBNSN6mOtI7Jco8k3BORyGs8yLoG1M5CXrPagbUzkJes9qDhfDgANEw2aWjd0XknWPNyq1PKt/Cr0L+ZUv7JTfhtUW8uZfzKQoY2dIwunhaGtcdsacLjZrgDcgngsETWN7Qhudck6rkmw1BFJeICAgICAgICAgICAgICAgICDbsM2DUdfHU1FQwul/KFVGCJJWWa1wsLNI4Ssk2mPDqYaxNIdD4rNHcR37+p76jnLJwhybtERUNTpamgFoo46ctBc51sVMXHM56yUtO+zVzRtaFF4NPCBDoinnhmp5ptunEzXROjFvNtaWkOI4vtVrV3bMW2dh47qP0Gr+tB3lXpp5QeO6j9Bq/rQd5OmcoPHdR+g1f1oO8nTOUHjuo/Qav60HeTpnKDx3UfoNX9aDvJ0zmg6V8LGjapuGbR1USB5Lw6APZ0OxezUnTUvFb+YQ9D+EjRdKcQoKyWUHKSR1OS39UXsOnWnBTHjpT71147qT0Gr+tB3k6bNyPHdR+g1f1oO8nTOUHjuo/Qav60HeTpnKDx3UfoNX9aDvJwOUHjuo/Qav60HeTpnKHLeEXwjQ6VpGU0NNNEW1DJi+V0ZFmseLANJz8r2K1a7Im2690OfedJ+y0/wCE1Y58udfykqGN7Ttu6RxZjbHC8nOwaSMLXc9nObkia+ZlERQQEBAQEBAQEBAQEBAQEBAQEG3Qeyp+jaBwhp90T1WmK6OJpcWtDgWawBdxJcLAWvwrJx3n8HTxW2xw3VmzXTOjnGWvhhqKfE0SMbDNTGBxGqORwIc3WM73O/a13GJ8MnKY8tGk6kSaT0g8tO1zR6Pc5p14HUrSW3G/Yqs+IampttaJXsfg22PuaC2F5aQCDumq1H/snOW5EVmN4ZeLTQHIv9Zqu8nOU8YPFpoDkX+s1XeTnJxg8WmgORf6zVd5OcnGDxaaA5F/rNV3k5ycYPFpoDkX+s1XeTnJxg8WmgORf6zVd5OcnGDxaaA5F/rNV3k5ycYPFpoDkX+s1XeTnJxg8WmgORf6zVd5OcnGDxaaA5F/rNV3k5ycYPFpoDkX+s1XeTnJxg8WmgORf6zVd5OcnGHh8Gux8AkwvAAuTumqyH1k5yTWFXo2lZJNFTQ+bgxbVFe7iyFvwRcm5OEAZqrlx+/k295dR7kouXm/cnsRt/RI93rdiMOFzRNNieW+VtbgLC/kkaiL2OfAh9Ert5cVIzC5zdeFxHUbI58xtOzFAQEBAQEBAQEBAQEBAQEBAQSNCaDkq9GPkp2h9VRaenq4Yy4NE2B7cUOI6sQ1HhAWTfafwdTHX/8AOGqpjrtNyy0j9Gy0UM1TDJWTyukDY2sDWuDMTG4nFrAAG3zN9Sdq991+9u2zLTrA3S2kWtFmtFCAOACmbYKk+IaerjvCRQ6UlhGFpDmcVwJA6OBQxY896doS/dFLxI/tdqMv0y3tD33Qy8SP7Xah9Mt7PPdDLxI/tdqH0y3swn2SytY9wjju1jnC+K1wL8KJjV2mfDiB4WK30al/jd5ZeENvnJ416z0al/jd5Rwg5yeNes9Gpf43eThBzk8a9b6NS/xu8nCDnLs9H7KJpIYpHRxAyRMeQMdgXNBIGfOqT5altVaJmNkj3Qy8SP7XaoR9Mt7Huhl4kf2u1D6Xb2PdDLxI/tdqH0y3si1ulpZRhJDWb7Wgi/SUYsme9428N+xhg3XTkn/c/oVh+kU6k45naW3p9HeaRm+x3haOAdTe4szaZQtGJuQ1jeb3UHzOtZZ7yDcGR/8AMrDTUUveaVneYaWq0d8NYyT4mUdZmiICAgICAgICAgICAgICAg9ZrHSsGq+pt8mzoo/+inzhr2L+EWk0Y2qpqiGpe/8AKFVJihEJbhc4ZeU8G+RWXTUmcNJ+6P0dPPfbLaPvn9V47wy6PFr01dYi48mm1fvVm6UsXUhzcOnItIVmkKuFr2RSOpA1suEPGGLCb4SRrHCtDUxNdRij5s07W0mX8Egyt4zesLbcLZ5t7OMOtE7Sx3SzjD2obSbqj43schxlpq6pm1yZ/wC2/ePFKmPK1azvD5gAtl0CyBZAsg+k6JqmCngBOYgiGo8QLWt5aF6zylL3WzjewqFOMvd1M43sKHGXu6WcYIbS929nGb1hDaUqB12gg3z1jpXnPUP4ifwev9I/ha/j+roNE6dlZZkoMrMhi+W0dO/9Kvp/UrYu2TvH92TUaKtu9O0/2aNK6ZllJb8XHxQc3DnP9Fj1Gvvm7R2hfT6SmPvPeVNNqHStj0r6y3yc/wBd+qp8/wDppXceYEBAQEBAQEBAQEBAQEBB44kA2FzwaroIkdW8PaXgNaHC9xvLDqKTfFaseZhtaWa0zVtM9olMdNSEkmGnJJuSYmkk8JNlwY0usiNo3/P/AG9NOr0Uzvyj8v8ATzHR8hT/ALlvdT6Nrfe35/7R9K0XvH5f6YVM8Aie2FkTC7D8Bgbex5gs+l02ojNW2TfaPeWvrNVprYLVx2jefuVS7rzwiBBb7HxRgufWOFxYMYWvc08LjYZozYuHmy8NVok5FsBByI2h+Y+qjY5YUXc+gfR6P1U9xW5T7p6uI3PoH0ej9VPcTlPudTEbn0D6PR+qnuJyn3OpiNz6B9Ho/VT3E5T7nUxJTKnRAADWwAAAACB4AA3vgqqOWFTbINxODX0jgH4rPY1r2tLbfCzFh/dGDL0571UqMAgILfRk8QYBI8NsTlnfX0Lg67TZr5ptSu8dno/T9bhxaeK2ttPdYt0jTjISNA6Hdi0J0Gp/oltftDT/ANcPH6QpzkZB1O7FMaDUx/JKY9Q08fzwrNI1TbDapA7yt4b1ucLq+m4MuO8zeu3ZzPVdVhzY6xSd+7VTzvcc25cOqy67gzEQlIqICAgICAgICAgICAgICAgwdE062jqCG8sDSs4vtKJ5SxNGzn60TyliaFvC72diHKXm4Rxj7EOTzcH6XsRPJ5uD9L2f3Q5vNwnjDqQ5G4Txh1FDkbhPGHUUOZuE8YdRQ5G4Txh1FDmbhPGHUhye7gPG9n90OZuD9L2f3Q5vdwDjHqRHJ6KFvCfYhylkKJnC7rHYhylkKRnAesojlLIU7OKPpzQ3lsawDUAOgIh6gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg//Z"
+            alt="text">
+    </section>
+    <section class="news">
+        <h3>Основные правила цифровой этики</h3>
+        <ul>
+            <li>〜 Проявлять уважение и вежливость к другим пользователям. Всегда приветствовать и прощаться с
+                собеседником.</li>
+            <li>〜 Не использовать оскорбительные слова и выражения, унизительные комментарии.</li>
+            <li>〜 Соблюдать правила форумов и социальных сетей, не спамить и не размещать запрещённый контент.</li>
+            <li>〜 Писать грамотно, избегая чрезмерного использования сокращений, ошибок и капса.</li>
+            <li>〜 Не раскрывать личные данные, такие как номера телефонов, адреса и финансовые данные.</li>
+            <li>〜 Если цитируется или используется чужой контент, предоставить соответствующие ссылки и признать
+                авторство.</li>
+            <li>〜 Избегать необоснованных заглавных букв, ведь это воспринимается как крик и может вызвать раздражение.
+            </li>
+            <li>〜 Быть терпимым к мнению других, уважать различия и спорить конструктивно.</li>
+            <li>〜 Прежде чем нажать кнопку отправки, перечитать сообщение и убедиться, что оно не будет воспринято как
+                оскорбительное или некорректное.</li>
+        </ul>
+    </section>
+    <div style="text-align: center;">
+
+    </div>
+    <div style="text-align: right;"> <a href="file:///C:/Users/IT-Kvant/Desktop/cmd.exe/cifrovayaetika№3.html">
+            <button class="cta-btn">→</button></a>
+    </div>
+    <footer>
+        <p>&copy; 2024-2025 >.< - Все права защищены. Подписывайтесь на <a
+                href="https://www.youtube.com/channel/UCCN4cJ9lvSchIgD2l1zX5JQ">YouTube</a> или <a
+                    href="https://vk.com/kvantoriumpyshma">VK</a></p>
+    </footer>
+
+</body>
+
+</html>

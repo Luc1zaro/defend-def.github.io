@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Команда Проекта</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="C:/Users/IT-Kvant/Desktop/cmd.exe/heartsmall.png">
+    <style>
+        /* Основные стили страницы */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff6f61, #ff3366);
+            color: #fff;
+            line-height: 1.6;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.3em;
+            padding: 8px 15px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border-radius: 25px;
+        }
+
+        nav a:hover {
+            background-color: #3498db;
+            transform: scale(1.1);
+        }
+
+        .main-content {
+            padding: 100px 20px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Раздел Биография */
+        .bio {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-bottom: 30px;
+            transition: background 0.3s ease;
+            display: flex;
+
+        }
+
+        .bio:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .bio h2 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .bio p {
+            font-size: 1.2em;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .bio img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Раздел Новости */
+        .news {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .news h3 {
+            font-size: 2.2em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .news ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .news ul li {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            transition: background 0.3s ease;
+        }
+
+        .news ul li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Раздел Статистика */
+        .stats {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .stats h3 {
+            font-size: 2.2em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .stats table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .stats th,
+        .stats td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #fff;
+        }
+
+        .stats th {
+            background-color: #3498db;
+            color: #fff;
+            font-size: 1.1em;
+        }
+
+        .stats td {
+            background-color: rgba(0, 0, 0, 0.3);
+            font-size: 1.2em;
+        }
+
+        /* Кнопка для улучшенной навигации */
+        .cta-btn {
+            background-color: #3498db;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-block
+        }
+
+        .cta-btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        .cta-btn2 {
+            background-color: #3498db;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-block;
+            float: left;
+            margin: 0 2px;
+            position: absolutes;
+            left: 15%;
+        }
+
+        .cta-btn3 {
+            background-color: #3498db;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-block;
+            float: left;
+            margin: 0 2px;
+            position: absolute;
+            right: 20%;
+
+        }
+
+        .cta-btn4 {
+            background-color: #3498db;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-block;
+            float: left;
+            margin: 0 2px;
+            position: absolute;
+            left: 7.5%;
+        }
+
+        .cta-btn5 {
+            background-color: #3498db;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-block;
+            float: left;
+            margin: 0 2px;
+            position: absolute;
+            right: 10%;
+
+        }
+
+        .rukovoditel {
+            width: 200px;
+        }
+
+        .e {
+            padding-right: 230px;
+        }
+
+        .s {
+            padding-right: 265px;
+        }
+
+        .p {
+            padding-right: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <header>
+        <h1>Команда проекта</h1>
+        <nav>
+            <a href="file:///C:/Users/IT-Kvant/Desktop/cmd.exe/cifrovayaetika.html">Цифровая Этика</a>
+            <a href="file:///C:/Users/IT-Kvant/Desktop/cmd.exe/zagatovka.html">Главная</a>
+            <a href="file:///C:/Users/IT-Kvant/Desktop/cmd.exe/zachitacifrovihdannih.html">Защита перс. данных</a>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <div class="main-content">
+
+            <section class="bio">
+                <div class="e">
+                    <h2>нᴀᴄᴛᴀʙниᴋ</h2>
+                    <img class="rukovoditel" src="C:/Users/IT-Kvant/Desktop/cmd.exe/ava2.png"
+                        alt="text">
+                    <h4>Ботников Евгений</h4>
+                </div>
+                <div class="s">
+                    <h2>ᴄоздᴀᴛᴇᴧь</h2>
+                    <img class="rukovoditel" src="C:/Users/IT-Kvant/Desktop/cmd.exe/ava.png" alt="text">
+                    <h4>Камардинов Станислав</h4>
+                </div>
+                <div class="p">
+                    <h2>ᴨоʍоɯниᴋ</h2>
+                    <img class="rukovoditel" src="C:/Users/IT-Kvant/Desktop/cmd.exe/ava.png" alt="text">
+                    <h4>Иркабаев Николай</h4>
+
+                </div>
+            </section>
+
+        <section class="news">
+            <h3>О проекте</h3>
+            <ul>
+                <li>Дата создания проекта: 16.01.2025</li>
+                <li>Дата создания презентации: 24.02.2025</li>
+                <li>Дата окончания создания проекта: 00.00.2025</li>
+                <li>Дата окончания создания презентации: 00.00.2025</li>
+            </ul>
+        </section>
+    </div>
+
+
+
+    <footer>
+        <p>&copy; 2024-2025 >.< - Все права защищены. Подписывайтесь на <a
+                href="https://www.youtube.com/channel/UCCN4cJ9lvSchIgD2l1zX5JQ">YouTube</a> или <a
+                    href="https://vk.com/kvantoriumpyshma">VK</a></p>
+    </footer>
+
+</body>
+
+</html>
